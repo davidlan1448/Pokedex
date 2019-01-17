@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+        <link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
+        <link rel="stylesheet" href="css/estilos.css">
+    </head>
+    <body>
+        <p>Escribe en nombre del pokemon que quieres buscar o su nro de Pokedex</p>
+        <form name="buscar">
+            <input type="text" name="nombre" class="campo">
+            <input type="button" value="Buscar" name="btn">
+        </form>
+        <div id="mostrar" class="mostrar">
+            <div id="encontrado"></div>
+            <img src="img/pokedex.png" alt="Pokedex" class="pokedex">
+            <div class="img" id="figura">
+            </div>
+            <div class="numero" id="numero">
+            </div>
+            <div class="info">
+                <div id="info"></div>
+                <div id="stats"></div>
+            </div>
+            <div class="tipo1" id="tipo1">
+            </div>
+            <div class="tipo2" id="tipo2">
+            </div>
+            <button id="mostrarStats">
+                Stats
+            </button>
+            <button id="mostrarInfo">
+                Info
+            </button>
+        </div>
+        <script src="js/pokeAPI.js"></script>
+    </body>
+</html>

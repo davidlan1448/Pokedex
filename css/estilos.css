@@ -1,0 +1,127 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  font-family: 'VT323', monospace; }
+
+body {
+  background-image: url(../img/fondo.jpg);
+  background-size: cover;
+  background-repeat: no-repeat; }
+  body > p {
+    width: 60%;
+    margin: auto;
+    font-size: 30px; }
+
+form {
+  width: 60%;
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 10px; }
+  form input:nth-child(1) {
+    width: 30%;
+    padding: 7px 5px 7px 5px;
+    border-radius: 0 5px 5px 0; }
+  form input:nth-child(2) {
+    float: left;
+    width: 10%;
+    padding: 7px;
+    border-radius: 5px 0 0 5px;
+    background: #192519;
+    color: greenyellow;
+    cursor: pointer; }
+
+.mostrar {
+  position: relative;
+  width: 60%;
+  height: 580px;
+  margin: auto; }
+  .mostrar #encontrado {
+    display: none;
+    width: 8.5%;
+    height: 62px;
+    position: absolute;
+    top: 17px;
+    left: 5.5%;
+    border-radius: 100px;
+    background: rgba(19, 255, 235, 0.808); }
+  .mostrar .pokedex {
+    width: 100%;
+    height: 100%; }
+  .mostrar .img {
+    position: absolute;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    top: 168px;
+    left: 9%;
+    width: 31%;
+    height: 158px;
+    border-radius: 10px; }
+    .mostrar .img img {
+      height: 150px; }
+  .mostrar .numero {
+    position: absolute;
+    top: 465px;
+    left: 11.8%;
+    width: 16%; }
+    .mostrar .numero p {
+      text-align: center;
+      font-size: 25px;
+      color: rgba(0, 105, 0, 0.671); }
+  .mostrar .info {
+    position: absolute;
+    top: 181px;
+    left: 59%;
+    width: 30.8%;
+    height: 85px;
+    border-radius: 10px; }
+    .mostrar .info p {
+      color: greenyellow;
+      font-size: 20px; }
+    .mostrar .info ::-webkit-scrollbar {
+      width: 15px; }
+    .mostrar .info ::-webkit-scrollbar-track {
+      background-color: greenyellow;
+      border-radius: 20px; }
+    .mostrar .info ::-webkit-scrollbar-thumb {
+      background-color: green;
+      border-radius: 20px; }
+  .mostrar #stats {
+    display: none;
+    height: 85px;
+    overflow: auto; }
+  .mostrar .tipo1 {
+    position: absolute;
+    top: 465px;
+    left: 59%;
+    width: 30%; }
+    .mostrar .tipo1 p {
+      color: greenyellow;
+      font-size: 20px; }
+  .mostrar .tipo2 {
+    position: absolute;
+    top: 465px;
+    left: 76%;
+    width: 30%; }
+    .mostrar .tipo2 p {
+      color: greenyellow;
+      font-size: 20px; }
+  .mostrar #mostrarStats {
+    position: absolute;
+    top: 390px;
+    left: 59%;
+    padding: 6px 0 6px 0;
+    width: 6.1%;
+    font-size: 18px;
+    cursor: pointer; }
+  .mostrar #mostrarInfo {
+    position: absolute;
+    top: 390px;
+    left: 65.4%;
+    padding: 6px 0 6px 0;
+    width: 6%;
+    font-size: 18px;
+    cursor: pointer; }
