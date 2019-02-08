@@ -17,26 +17,30 @@ function buscar(pokemon){
     var tipo2 = document.getElementById('tipo2');
     var encontrado = document.getElementById('encontrado');
 
-    figura.innerHTML = "<img src='img/cargando.gif'>"
+    figura.innerHTML = "<img src='img/cargando.gif'>";
+    tipo1.innerHTML = "";
+    tipo2.innerHTML = "";
+    numero.innerHTML = "";
+    info.innerHTML = "";
     var request = new XMLHttpRequest();
     request.onreadystatechange = function(){
         if(this.readyState == 4){
             respuesta = JSON.parse(this.responseText);
-            console.log(respuesta);
             figura.innerHTML = "<img src='"+respuesta.sprites.front_default+"'>"+
                                 "<img src='"+respuesta.sprites.back_default+"'>";
             numero.innerHTML = "<p>no."+respuesta.id+"</p>";
             info.innerHTML = "<p>Nombre: "+respuesta.name+"</p>"+
-                            "<p>Peso: "+respuesta.weight+"kg</p>"+
-                            "<p>Altura: "+respuesta.height+"m</p>"+
-                            "<p>Exp base: "+respuesta.base_experience+"</p>";
-            tipo1.innerHTML = "<p>"+respuesta.types[0].type.name+"</p>"
+                            "<p>Peso: "+((respuesta.weight).toString()).slice(0,(respuesta.weight).toString().length-1)+"kg</p>"+
+                            "<p>Altura: "+altura(respuesta.height)+"m</p>"+
+                            "<p>Exp base: "+respuesta.base_experience+"epx</p>";
+            tipo1.innerHTML = "<p>"+respuesta.types[0].type.name+"</p>";
+
             if(respuesta.types.length > 1){
                 tipo2.innerHTML = "<p>"+respuesta.types[1].type.name+"</p>"
             }
             stats.innerHTML = "";
             for(let i=0;i<respuesta.stats.length;i++){
-                var p = document.createElement('p')
+                var p = document.createElement('p');
                 p.textContent = respuesta.stats[i].stat.name+": "+respuesta.stats[i].base_stat;
                 stats.appendChild(p);
             }
@@ -63,4 +67,14 @@ mostrarInfo.onclick = function(){
 
     info.style.display = "block";
     stats.style.display = "none";
+}
+
+function altura(altura){
+    let a = (altura).toString();
+    if(a.length > 1){
+        return a.slice(0,a.length-1);
+    }
+    else{
+        return "0,"+a;
+    }
 }
